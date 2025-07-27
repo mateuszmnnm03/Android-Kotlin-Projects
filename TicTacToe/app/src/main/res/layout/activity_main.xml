@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Tytuł gry -->
+    <TextView
+        android:id="@+id/t0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:text="Tic Tac Toe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Informacja kto gra -->
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Playing:"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/t0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Imiona graczy -->
+    <LinearLayout
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/t1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playerx"
+            android:text="Player X"
+            android:background="@drawable/player_bg"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/playero"
+            android:background="@drawable/player_bg"
+            android:text="Player O"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+
+<!--    1 rzad-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/row1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/t2"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="12dp">
+
+        <Button
+            android:id="@+id/b1"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b2"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b3"
+            style="@style/TicTacToeButton"/>
+    </LinearLayout>
+
+<!--    2 rzad-->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/row1">
+
+        <Button
+            android:id="@+id/b4"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b5"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b6"
+            style="@style/TicTacToeButton"/>
+    </LinearLayout>
+
+<!--    3 rzad-->
+    <LinearLayout
+        android:id="@+id/row3"
+        app:layout_constraintTop_toBottomOf="@id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/b7"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b8"
+            style="@style/TicTacToeButton"/>
+
+        <Button
+            android:id="@+id/b9"
+            style="@style/TicTacToeButton"/>
+    </LinearLayout>
+
+<!--    reset-->
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/row3"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="RESET"
+        android:textSize="25sp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
